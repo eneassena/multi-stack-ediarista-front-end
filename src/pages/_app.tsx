@@ -11,7 +11,7 @@ import { AppContainer } from '@styles/pages/_app.style';
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
-    document.querySelector("#jss-server-side")?.remove();
+    document.querySelector('#jss-server-side')?.remove();
   }, []);
 
   return <>
