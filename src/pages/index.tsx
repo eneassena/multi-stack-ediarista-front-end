@@ -12,7 +12,6 @@ export const getStaticProps: GetStaticProps = async () => {
 };
 
 export default function Index() {
-
     return (
         <div>
             <Presentation></Presentation>
