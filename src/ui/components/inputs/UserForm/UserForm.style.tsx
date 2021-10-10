@@ -13,8 +13,6 @@ export const BaseGrid = styled('div')`
         gap: ${({ theme }) => theme.spacing(3)};
     }    
 `;
-
- 
 export const PaymentData = styled(BaseGrid)`
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 
@@ -45,13 +43,6 @@ export const UserData = styled(BaseGrid)`
             'telefone';
     }
 `;
-export const NewContactData = styled(BaseGrid)`
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas: 
-        'email email'
-        'senha password-strength'
-        'confirmar-senha password-strength';
- 
 export const UserData = styled(BaseGrid)`
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas: 
@@ -80,7 +71,6 @@ export const NewContactData = styled(BaseGrid)`
             'password-strength';
     }
 `;
-
 export const PictureSelection = styled(BaseGrid)`
     grid-template-columns: 1fr;
     grid-template-columns: 1fr;
