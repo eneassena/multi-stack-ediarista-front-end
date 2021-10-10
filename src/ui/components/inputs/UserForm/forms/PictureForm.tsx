@@ -1,19 +1,24 @@
-import {PictureSelection} from "../UserForm.style";
+import { PictureSelection } from "../UserForm.style";
 import FileField from "../../FileField/FileField";
-import {useFormContext, Controller} from "react-hook-form";
+import { useFormContext, Controller } from "react-hook-form";
 
 export const PictureForm = () => {
-    const {control} = useFormContext();
-    
+    const { control } = useFormContext();
+
     return <PictureSelection>
-            <FileField
-                inputProps={{
-                    accept: '.jpeg, .jpg, .png',
-                    
-                }}    
-                onChange={}
-            />
-        
+        <Controller
+            name={'usuario.foto_documento'}
+            defaultValue={''}
+            control={control}
+            render={({ field }) => (
+                < FileField
+                    onChange={(files) => field.onChange(files[0])}
+                    inputProps={{
+                        accept: '.jpeg, .jpg, .png',
+                    }
+                    }
+                />
+            )}
+        />
     </PictureSelection>
-    
 }
